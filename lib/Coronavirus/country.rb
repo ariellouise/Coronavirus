@@ -1,11 +1,12 @@
 class Country 
-  attr_accessor :name, :cases, :total_cases
+  attr_accessor :name, :total_cases, :deaths, :recovered
   @@all = []
   
-  def initialize(name:, cases:, total_cases:)
+  def initialize(name:, total_cases:, deaths:, recovered:)
     @name = name 
-    @cases = cases
     @total_cases = total_cases
+    @deaths = deaths
+    @recovered = recovered
     @@all << self 
   end 
   
