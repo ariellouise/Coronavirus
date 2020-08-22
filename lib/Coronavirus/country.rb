@@ -19,3 +19,5 @@ class Country
   end 
   
 end 
+
+#find by country name, need to make a country variable? find_by_name if find(name) won't work. 
