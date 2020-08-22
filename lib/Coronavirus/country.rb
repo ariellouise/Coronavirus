@@ -14,7 +14,7 @@ class Country
     @@all 
   end 
   
-  def self.find(name)
+  def self.find_by_name(name)
     @@all.find
   end 
   

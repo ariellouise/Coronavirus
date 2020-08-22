@@ -2,5 +2,4 @@
 
 require_relative "../lib/Coronavirus/version.rb"
 
-
 Cli.new.start

@@ -2,7 +2,9 @@ class CLI
   
   def start 
     puts "Welcome to the Coronavirus Statistics CLI. To begin, please type the name of a country."
-    
+    @c_name = gets.strip
+    Api.get_data(@c_name)
+    Country.find_by_name(@c_name) 
   end 
   
   def statistics(country)
@@ -11,7 +13,7 @@ class CLI
     puts "2. Deceased Cases"
     puts "3. Recovered Cases"
   end 
-  
+  #needs case statement regarding case "1" puts ...
   def error 
     puts "Sorry, that answer was invalid. Please try again!"
   end 
