@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby 
+
+#puts "Testing" ---WORKED 
+
+require_relative '../lib/Coronavirus'
+
+cli.new.start
