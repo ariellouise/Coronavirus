@@ -5,10 +5,19 @@ class CLI
     
   end 
   
-  def statistics
+  def statistics(country)
+    puts "Please type a number to see that particular statistic #{country.name}:"
+    puts "1. Total Cases"
+    puts "2. Deceased Cases"
+    puts "3. Recovered Cases"
+  end 
+  
+  def error 
+    puts "Sorry, that answer was invalid. Please try again!"
   end 
   
   def end_program
+    exit
   end 
   
 end 
