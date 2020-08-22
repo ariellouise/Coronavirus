@@ -2,28 +2,30 @@ class CLI
   
   def start 
     puts "Welcome to the Coronavirus Statistics CLI. To begin, please type the name of a country."
-    @c_name = gets.strip
+    @c_name = gets.strip.downcase
     Api.get_data(@c_name)
     Country.find_by_name(@c_name) ? statistics(Country.find_by_name(@c_name))
   end 
   
-  def statistics(country)
+  def menu
     puts "Please type a number to see that particular statistic #{country.name}:"
     puts "1. Total Cases"
     puts "2. Deceased Cases"
     puts "3. Recovered Cases"
     puts "4. Exit Program"
-    choice = gets.strip
-    
+    input = gets.strip.downcase
+    return input
+  end 
+  
+  def statistics(country)
     case "1"
-     total_cases 
+    total_cases
     when "2"
-     deaths
+    deaths
     when "3"
-     recovered 
+    recovered 
     when "4"
-     end_program 
-    end
+    end_program
   end 
     
 
