@@ -4,7 +4,7 @@ class CLI
     puts "Welcome to the Coronavirus Statistics CLI. To begin, please type the name of a country."
     @c_name = gets.strip
     Api.get_data(@c_name)
-    Country.find_by_name(@c_name) 
+    Country.find_by_name(@c_name) ? statistics(Country.find_by_name(@c_name))
   end 
   
   def statistics(country)
