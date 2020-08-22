@@ -9,24 +9,32 @@ class CLI
   
   def menu
     puts "Please type a number to see that particular statistic #{country.name}:"
+    list_options
+    input = gets.strip.downcase
+    return input
+  end 
+    
+    
+    
+  def list_options
     puts "1. Total Cases"
     puts "2. Deceased Cases"
     puts "3. Recovered Cases"
     puts "4. Exit Program"
-    input = gets.strip.downcase
-    return input
   end 
   
-  def statistics(country)
+  def choose_option(option)
     case "1"
-    total_cases
+      puts "The total cases for #{country.name} is #{country.cases}."
     when "2"
-    deaths
+      puts "The total deaths for #{country.name} is #{country.deaths}."
     when "3"
-    recovered 
+      puts "The total recoveries for #{country.name} is #{country.recovered}"
     when "4"
     end_program
   end 
+    
+    
     
 
   def error 
